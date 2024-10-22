@@ -8,11 +8,14 @@ int main() {
     // Get and print the hostname
     char hostname[1024];
     if (gethostname(hostname, sizeof(hostname)) == 0) {
-        printf("myhostname: %s\n", hostname);
+        printf("my system hostname: %s\n", hostname);
     } else {
-        perror("gethostname");
+        perror("system gethostname");
     }
 
+    printf("hostname found: [hostname=%s]", hostname);
+
+    printf("now get os name\n");
     // Get and print the OS name
     struct utsname system_info;
     if (uname(&system_info) == 0) {
