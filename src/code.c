@@ -8,7 +8,7 @@ int main() {
     // Get and print the hostname
     char hostname[1024];
     if (gethostname(hostname, sizeof(hostname)) == 0) {
-        printf("Hostname: %s\n", hostname);
+        printf("myhostname: %s\n", hostname);
     } else {
         perror("gethostname");
     }
