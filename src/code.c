@@ -8,7 +8,7 @@ int main() {
     // Get and print the hostname
     char hostname[1024];
     if (gethostname(hostname, sizeof(hostname)) == 0) {
-        printf("matrix system hostname: %s\n", hostname);
+        printf("my system hostname: %s\n", hostname);
     } else {
         perror("system gethostname");
     }
